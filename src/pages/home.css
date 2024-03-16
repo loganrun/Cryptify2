@@ -1,0 +1,7 @@
+.video-container {
+    @apply relative w-full h-screen overflow-hidden;
+  }
+  
+  .video-overlay {
+    @apply absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center;
+  }
