@@ -1,6 +1,17 @@
 import React from 'react'
 import Navbar from '../components/NavaBar'
 import './main.css'
+import Avax from '../assets/images/avax@2x.png'
+import Binance from '../assets/images/bnb@2x.png'
+import Bitcoin from '../assets/images/btc@2x.png'
+import Doge from "../assets/images/doge@2x.png"
+import Shiba from '../assets/images/sbd@2x.png'
+import XRP from '../assets/images/xrp@2x.png'
+import USDC from '../assets/images/usdc@2x.png'
+import FDUSD from '../assets/images/fidc@2x.png'
+import Solana from '../assets/images/sol@2x.png'
+import Etherium from '../assets/images/eth@2x.png'
+import Generic from '../assets/images/generic@2x.png'
 
 function mainPaig() {
   return (
