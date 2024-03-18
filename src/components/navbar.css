@@ -1,0 +1,14 @@
+/* Adjust these colors to match your preference */
+.bg-gray-800 {
+    background-color: #1F2937; /* Darker blue complementing #001E2B */
+  }
+  
+  .text-white {
+    color: #f1f5f9; /* Light grayish white for contrast */
+  }
+  
+  @media (min-width: 768px) {
+    .hidden {
+      display: flex;
+    }
+  }
