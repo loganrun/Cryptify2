@@ -1,7 +1,7 @@
 
 function CryptoCards({ data }) {
-    const { name, image, current_price, price_change_24h, total_volume } = data;
-    //const priceDifference = current_price - openingPrice;
+    const { name, image, current_price, high_24h, total_volume } = data;
+    const priceDifference = current_price - high_24h;
   
     return (
       <div className="bg-[#423A6F] rounded-lg shadow-md overflow-hidden">
@@ -11,11 +11,11 @@ function CryptoCards({ data }) {
         </div>
         <div className="px-4 py-2">
           <p className="text-white">Current Price: ${current_price.toFixed(2)}</p>
-          <p className="text-white"> Last 24 Hours: ${price_change_24h.toFixed(2)}</p>
-          {price_change_24h > 0 ? (
-            <p className="text-green-500">Difference: +${price_change_24h.toFixed(2)}</p>
+          <p className="text-white">Highest 24 Hours : ${high_24h.toFixed(2)}</p>
+          {priceDifference > 0 ? (
+            <p className="text-green-500">Difference: +${priceDifference.toFixed(2)}</p>
           ) : (
-            <p className="text-red-500">Difference: -${Math.abs(price_change_24h).toFixed(2)}</p>
+            <p className="text-red-500">Difference: -${Math.abs(priceDifference).toFixed(2)}</p>
           )}
           <p className="text-white">Volume: {total_volume.toFixed(2)}</p>
         </div>
