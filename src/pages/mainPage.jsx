@@ -26,33 +26,33 @@ function mainPaig() {
   },[])
 
   const fetchCoins  = async ()=>{
-    // const res = await axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false')
-    // console.log(res.data)
-    const apiKey = '76387EF5-D925-43D3-B1EC-1CFBF8DAF591'; // Replace with your CoinAPI API key
-const baseUrl = 'https://rest.coinapi.io/v1/ohlcv/BITSTAMP_SPOT_BTC_USD/latest';
+    const res = await axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false')
+    console.log(res.data)
+// const apiKey = '76387EF5-D925-43D3-B1EC-1CFBF8DAF591'; // Replace with your CoinAPI API key
+// const baseUrl = 'https://rest.coinapi.io/v1/ohlcv/BITSTAMP_SPOT_BTC_USD/latest';
 
-const twoWeeksAgo = new Date();
-twoWeeksAgo.setDate(twoWeeksAgo.getDate() - 14);
-const startTime = twoWeeksAgo.toISOString();
+// const twoWeeksAgo = new Date();
+// twoWeeksAgo.setDate(twoWeeksAgo.getDate() - 14);
+// const startTime = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
 
-const endTime = new Date().toISOString();
+// const endTime = new Date().toISOString();
 
-const config = {
-  headers: {
-    'X-CoinAPI-Key': apiKey
-  },
-  params: {
-    period_id: '1DAY',
-    time_start: startTime,
-    time_end: endTime
-  }
-};
+// const config = {
+//   headers: {
+//     'X-CoinAPI-Key': apiKey
+//   },
+//   params: {
+//     period_id: '1HRS',
+//     time_start: startTime,
+//     time_end: endTime
+//   }
+// };
 
-try {const response = await axios.get(baseUrl, config)
-  console.log(response)
-} catch (error) {
-  console.error('Error fetching data:', error);
-}
+// try {const response = await axios.get(baseUrl, config)
+//   console.log(response)
+// } catch (error) {
+//   console.error('Error fetching data:', error);
+// }
 }
 
 return (
@@ -63,30 +63,17 @@ return (
           <h1 className='text-center text-[#f1f5f9] text-4xl'>DASHBOARD</h1>
         </header>
       <main className="mb-8 mt-12  grid grid-cols-4 gap-4"> 
-        <div class="max-w-sm rounded overflow-hidden shadow-lg bg-[#F59319]">
-        <div class="px-6 py-4">
+        <div className="max-w-sm rounded overflow-hidden shadow-lg bg-[#423A6F]">
+        <div className="px-6 py-4">
         <div className="mb-2 flex items-center justify-between">
             <p className="font-bold text-2xl">The Coldest Sunset</p>
-            <img
-              className="h-8 w-8" // Set the height and width of the image
-              src={Etherium}
-              alt="Logo"
-            />
+            <img className="h-8 w-8" src={Etherium} alt="Logo"/>
         </div>
-          {/* <div class=" mb-2">
-            <p className='inline-block font-bold text-xl'>The Coldest Sunset</p>
-            <img className="inline-block justify-self-end"src={Etherium} alt="Logo"/>
-          
-          </div> */}
             <p class="text-gray-700 text-base">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
             </p>
         </div>
-        <div class="px-6 pt-4 pb-2">
-          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-        </div>
+        
         </div>
         <div class="max-w-sm rounded overflow-hidden shadow-lg bg-[#423A6F]">
         <div class="px-6 py-4">
